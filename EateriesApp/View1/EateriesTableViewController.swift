@@ -37,8 +37,6 @@ class EateriesTableViewController: UITableViewController {
             //галочка назад
 //        navigationController?.navigationBar.tintColor = .white
 //        navigationController?.navigationBar.backgroundColor = UIColor.green
-
-
         
     }
     

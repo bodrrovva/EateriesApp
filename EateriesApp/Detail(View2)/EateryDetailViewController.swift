@@ -11,7 +11,14 @@ class EateryDetailViewController: UIViewController, UITableViewDataSource, UITab
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var reatButton: UIButton!
     var rest: Restaurant?
+    
+    
+    //настраиваем кнопку назад(крестик)
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        
+    }
     
     //настраиваем навигационную панель
     override func viewWillAppear(_ animated: Bool) {
