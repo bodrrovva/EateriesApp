@@ -7,17 +7,22 @@
 
 import UIKit
 
-class EateryDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class EateryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var reatButton: UIButton!
+    @IBOutlet weak var rateButton: UIButton!
     var rest: Restaurant?
     
     
-    //настраиваем кнопку назад(крестик)
+    //настраиваем переход
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
-        
+        //передаем оценку с экрана RateViewController
+        guard let svc = segue.source as? Rate else { return }
+        guard let rating = svc.restRaiting else { return }
+        guard let color = svc.color else { return }
+        rateButton.setImage(UIImage(systemName: rating), for: .normal)
+        rateButton.tintColor = color
     }
     
     //настраиваем навигационную панель
@@ -56,7 +61,7 @@ class EateryDetailViewController: UIViewController, UITableViewDataSource, UITab
     //создаем и настраиваем ячейку
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Ячека cell обращается к ячейкакм класса EateryDetailTableViewCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateryDetailTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateryDetailCell
         
         switch indexPath.row{
         case 0:
@@ -78,7 +83,7 @@ class EateryDetailViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
-    //анимация выделения 
+    //анимация выделения при нажатии на элемент в таблице
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EateryDetailTableViewCell: UITableViewCell {
+class EateryDetailCell: UITableViewCell {
 
     @IBOutlet weak var keyLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!

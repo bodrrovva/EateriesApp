@@ -7,10 +7,10 @@
 
 import UIKit
 
-class EateriesTableViewController: UITableViewController {
+class Eateries: UITableViewController {
     
+    //заглушка с данными(потом будет api)
     var rest: [Restaurant] = [
-    
     Restaurant(name: "Ogonek Grill&Bar", location: "Уфа, бульвар Хадии Давлетшиной 21, вход со стороны улицы", type: "Ресторан", image: "ogonek.jpg", isVisited: false),
     Restaurant(name: "Елу", location: "Уфа", type: "Ресторан", image: "elu.jpg", isVisited: false),
     Restaurant(name: "Bonsai", location: "Уфа", type: "Ресторан", image: "bonsai.jpg", isVisited: false),
@@ -28,15 +28,11 @@ class EateriesTableViewController: UITableViewController {
     Restaurant(name: "Бочка", location: "Уфа", type: "Ресторан", image: "bochka.jpg", isVisited: false)
     ]
 
+    
     //настраиваем навигационную панель
     override func viewWillAppear(_ animated: Bool) {
         //панель убирается при скролле
         navigationController?.hidesBarsOnSwipe = true
-        
-        //navigationController?.navigationBar.barStyle = UIBarStyle.default
-            //галочка назад
-//        navigationController?.navigationBar.tintColor = .white
-//        navigationController?.navigationBar.backgroundColor = UIColor.green
         
     }
     
@@ -65,7 +61,7 @@ class EateriesTableViewController: UITableViewController {
     
     //метод создает ячейку
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateriesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateriesCell
         
         cell.nameLabel.text = rest[indexPath.row].name
         cell.locationLabel.text = rest[indexPath.row].location
@@ -78,41 +74,6 @@ class EateriesTableViewController: UITableViewController {
         
         return cell
     }
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//
-//        //настраиваем высплывающие окна
-//        let ac = UIAlertController(title: nil, message: "Выберите действие", preferredStyle: .actionSheet)
-//        //1 действие
-//        let call = UIAlertAction(title: "Позвонить: +7(999)999-9\(indexPath.row)", style: .default) {
-//            //создаем еще один алерт внутри основного алерта
-//            (action: UIAlertAction) -> Void in
-//
-//            let alertC = UIAlertController(title: nil, message: "Вызов не может быть совершен", preferredStyle: .alert)
-//            let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-//            alertC.addAction(ok)
-//            self.present(alertC, animated: true, completion: nil)
-//        }
-//        //2 действие
-//        let isVisitedTitle = self.rest[indexPath.row].isVisited ? "Я не был здесь" : "Я был здесь"
-//        let isVisited = UIAlertAction(title: isVisitedTitle, style: .default){ (action) in
-//            let cell = tableView.cellForRow(at: indexPath)
-//            //галочка
-//            self.rest[indexPath.row].isVisited = !self.rest[indexPath.row].isVisited
-//            cell?.accessoryType = self.rest[indexPath.row].isVisited ? .checkmark: .none
-//        }
-//        //3 действие
-//        let cancel = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-//
-//        ac.addAction(call)
-//        ac.addAction(isVisited)
-//        ac.addAction(cancel)
-//
-//        present(ac, animated: true, completion: nil)
-//
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
-
 
     //Дополнительные действия по свайпу
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -144,7 +105,7 @@ class EateriesTableViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 //destination view controller - конечная точка
                 //обращаемся к классу EateryDetailViewController
-                let dvc = segue.destination as! EateryDetailViewController
+                let dvc = segue.destination as! EateryDetail
                 dvc.rest = self.rest[indexPath.row]
             }
         }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EateriesTableViewCell: UITableViewCell {
+class EateriesCell: UITableViewCell {
     
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
