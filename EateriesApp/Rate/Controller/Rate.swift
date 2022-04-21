@@ -20,13 +20,13 @@ class Rate: UIViewController {
         switch sender.tag{
         case 1:
             restRaiting = "hand.thumbsup.fill"
-            color = .green
+            color = UIColor(named: "Green")
         case 2:
             restRaiting = "hand.thumbsdown.fill"
-            color = .red
+            color = UIColor(named: "Red")
         default: break
         }
-        //принудительный переход в обратную сторону
+        //принудительный переход назад
         performSegue(withIdentifier: "unwindSegueDVC", sender: sender)
     }
 

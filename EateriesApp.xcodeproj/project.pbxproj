@@ -33,6 +33,7 @@
 		3F38F335280D9010006A9D3E /* Eateries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eateries.swift; sourceTree = "<group>"; };
 		3F38F337280D9034006A9D3E /* EateriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateriesCell.swift; sourceTree = "<group>"; };
 		3FBAE581281014A500C3F30C /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		3FE21960281183A500702DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,8 +50,8 @@
 		3F15C5EC280ECD87007EE075 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
-				3F15C5EA280ECD07007EE075 /* EateryDetailCell.swift */,
-				3F15C5E6280EA3C6007EE075 /* EateryDetail.swift */,
+				3FE21964281186AA00702DF4 /* View */,
+				3FE21965281186B300702DF4 /* Controller */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -58,8 +59,8 @@
 		3F15C5EF280EE7C4007EE075 /* Eateries */ = {
 			isa = PBXGroup;
 			children = (
-				3F38F337280D9034006A9D3E /* EateriesCell.swift */,
-				3F38F335280D9010006A9D3E /* Eateries.swift */,
+				3FE219622811861E00702DF4 /* View */,
+				3FE219632811868C00702DF4 /* Controller */,
 			);
 			path = Eateries;
 			sourceTree = "<group>";
@@ -83,7 +84,11 @@
 		3F38F320280D8C36006A9D3E /* EateriesApp */ = {
 			isa = PBXGroup;
 			children = (
+				3FE21961281183BB00702DF4 /* Support */,
 				3FC7CA4028115F8400934296 /* Application */,
+				3F15C5EF280EE7C4007EE075 /* Eateries */,
+				3F15C5EC280ECD87007EE075 /* Detail */,
+				3FBAE5802810146D00C3F30C /* Rate */,
 			);
 			path = EateriesApp;
 			sourceTree = "<group>";
@@ -91,7 +96,7 @@
 		3FBAE5802810146D00C3F30C /* Rate */ = {
 			isa = PBXGroup;
 			children = (
-				3FBAE581281014A500C3F30C /* Rate.swift */,
+				3FE219662811884000702DF4 /* Controller */,
 			);
 			path = Rate;
 			sourceTree = "<group>";
@@ -102,10 +107,6 @@
 				3FC7CA4328115F9400934296 /* Model */,
 				3FC7CA4228115F9100934296 /* View */,
 				3FC7CA4128115F8B00934296 /* Controller */,
-				3FC7CA4428115FB900934296 /* Support */,
-				3F15C5EF280EE7C4007EE075 /* Eateries */,
-				3F15C5EC280ECD87007EE075 /* Detail */,
-				3FBAE5802810146D00C3F30C /* Rate */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -136,12 +137,53 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		3FC7CA4428115FB900934296 /* Support */ = {
+		3FE21961281183BB00702DF4 /* Support */ = {
 			isa = PBXGroup;
 			children = (
 				3F38F32A280D8C37006A9D3E /* Assets.xcassets */,
+				3FE21960281183A500702DF4 /* Info.plist */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		3FE219622811861E00702DF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F38F337280D9034006A9D3E /* EateriesCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FE219632811868C00702DF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F38F335280D9010006A9D3E /* Eateries.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3FE21964281186AA00702DF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F15C5EA280ECD07007EE075 /* EateryDetailCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3FE21965281186B300702DF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F15C5E6280EA3C6007EE075 /* EateryDetail.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3FE219662811884000702DF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FBAE581281014A500C3F30C /* Rate.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -369,13 +411,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EateriesApp/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -396,13 +439,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EateriesApp/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = Main;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
