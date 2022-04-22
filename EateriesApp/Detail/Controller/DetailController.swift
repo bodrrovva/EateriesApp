@@ -7,18 +7,19 @@
 
 import UIKit
 
-class EateryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DetailController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var rateButton: UIButton!
     var rest: Restaurant?
+    @IBOutlet weak var mapButton: UIButton!
     
     
     //настраиваем переход
     @IBAction func unwindSegue(segue: UIStoryboardSegue) {
         //передаем оценку с экрана RateViewController
-        guard let svc = segue.source as? Rate else { return }
+        guard let svc = segue.source as? RateController else { return }
         guard let rating = svc.restRaiting else { return }
         guard let color = svc.color else { return }
         rateButton.setImage(UIImage(systemName: rating), for: .normal)
@@ -61,7 +62,7 @@ class EateryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate
     //создаем и настраиваем ячейку
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //Ячека cell обращается к ячейкакм класса EateryDetailTableViewCell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EateryDetailCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DetailCell
         
         switch indexPath.row{
         case 0:
@@ -86,6 +87,14 @@ class EateryDetail: UIViewController, UITableViewDataSource, UITableViewDelegate
     //анимация выделения при нажатии на элемент в таблице
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    //передаем данные в MapController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mapSegue" {
+            let dvc = segue.destination as! MapController
+            dvc.rest = self.rest
+        }
     }
 
 }

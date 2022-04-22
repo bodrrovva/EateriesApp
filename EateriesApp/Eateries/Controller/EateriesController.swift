@@ -7,11 +7,11 @@
 
 import UIKit
 
-class Eateries: UITableViewController {
+class EateriesController: UITableViewController {
     
     //заглушка с данными(потом будет api)
     var rest: [Restaurant] = [
-    Restaurant(name: "Ogonek Grill&Bar", location: "Уфа, бульвар Хадии Давлетшиной 21, вход со стороны улицы", type: "Ресторан", image: "ogonek.jpg", isVisited: false),
+    Restaurant(name: "Ogonek Grill&Bar", location: "Уфа, бульвар Хадии Давлетшиной 21", type: "Ресторан", image: "ogonek.jpg", isVisited: false),
     Restaurant(name: "Елу", location: "Уфа", type: "Ресторан", image: "elu.jpg", isVisited: false),
     Restaurant(name: "Bonsai", location: "Уфа", type: "Ресторан", image: "bonsai.jpg", isVisited: false),
     Restaurant(name: "Дастархан", location: "Уфа", type: "Ресторан", image: "dastarhan.jpg", isVisited: false),
@@ -27,6 +27,11 @@ class Eateries: UITableViewController {
     Restaurant(name: "Шок", location: "Уфа", type: "Ресторан", image: "shok.jpg", isVisited: false),
     Restaurant(name: "Бочка", location: "Уфа", type: "Ресторан", image: "bochka.jpg", isVisited: false)
     ]
+    
+    //позволяет вернуться на предыдущий экран
+    @IBAction func close(segue: UIStoryboardSegue){
+        
+    }
 
     
     //настраиваем навигационную панель
@@ -105,7 +110,7 @@ class Eateries: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 //destination view controller - конечная точка
                 //обращаемся к классу EateryDetailViewController
-                let dvc = segue.destination as! EateryDetail
+                let dvc = segue.destination as! DetailController
                 dvc.rest = self.rest[indexPath.row]
             }
         }

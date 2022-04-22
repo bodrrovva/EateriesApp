@@ -7,7 +7,7 @@
 
 import UIKit
 
-class Rate: UIViewController {
+class RateController: UIViewController {
     
     @IBOutlet weak var goodButton: UIButton!
     @IBOutlet weak var badButton: UIButton!

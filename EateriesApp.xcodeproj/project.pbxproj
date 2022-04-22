@@ -7,33 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F15C5E7280EA3C6007EE075 /* EateryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15C5E6280EA3C6007EE075 /* EateryDetail.swift */; };
+		3F15C5E7280EA3C6007EE075 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15C5E6280EA3C6007EE075 /* DetailController.swift */; };
 		3F15C5E9280EAE0D007EE075 /* RestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15C5E8280EAE0D007EE075 /* RestModel.swift */; };
-		3F15C5EB280ECD07007EE075 /* EateryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15C5EA280ECD07007EE075 /* EateryDetailCell.swift */; };
+		3F15C5EB280ECD07007EE075 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F15C5EA280ECD07007EE075 /* DetailCell.swift */; };
 		3F38F322280D8C36006A9D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F321280D8C36006A9D3E /* AppDelegate.swift */; };
 		3F38F324280D8C36006A9D3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F323280D8C36006A9D3E /* SceneDelegate.swift */; };
 		3F38F329280D8C36006A9D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F38F327280D8C36006A9D3E /* Main.storyboard */; };
 		3F38F32B280D8C37006A9D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F38F32A280D8C37006A9D3E /* Assets.xcassets */; };
 		3F38F32E280D8C37006A9D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F38F32C280D8C37006A9D3E /* LaunchScreen.storyboard */; };
-		3F38F336280D9010006A9D3E /* Eateries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F335280D9010006A9D3E /* Eateries.swift */; };
+		3F38F336280D9010006A9D3E /* EateriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F335280D9010006A9D3E /* EateriesController.swift */; };
 		3F38F338280D9034006A9D3E /* EateriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F38F337280D9034006A9D3E /* EateriesCell.swift */; };
-		3FBAE582281014A500C3F30C /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE581281014A500C3F30C /* Rate.swift */; };
+		3FBAE582281014A500C3F30C /* RateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAE581281014A500C3F30C /* RateController.swift */; };
+		3FE219692812A06200702DF4 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE219682812A06200702DF4 /* MapController.swift */; };
+		3FE2196D2812A23B00702DF4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE2196C2812A23B00702DF4 /* MapKit.framework */; };
+		3FE219702812C7AB00702DF4 /* NewEateriesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE2196F2812C7AB00702DF4 /* NewEateriesController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F15C5E6280EA3C6007EE075 /* EateryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateryDetail.swift; sourceTree = "<group>"; };
+		3F15C5E6280EA3C6007EE075 /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		3F15C5E8280EAE0D007EE075 /* RestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestModel.swift; sourceTree = "<group>"; };
-		3F15C5EA280ECD07007EE075 /* EateryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateryDetailCell.swift; sourceTree = "<group>"; };
+		3F15C5EA280ECD07007EE075 /* DetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		3F38F31E280D8C36006A9D3E /* EateriesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EateriesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F38F321280D8C36006A9D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F38F323280D8C36006A9D3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3F38F328280D8C36006A9D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F38F32A280D8C37006A9D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F38F32D280D8C37006A9D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3F38F335280D9010006A9D3E /* Eateries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eateries.swift; sourceTree = "<group>"; };
+		3F38F335280D9010006A9D3E /* EateriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateriesController.swift; sourceTree = "<group>"; };
 		3F38F337280D9034006A9D3E /* EateriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EateriesCell.swift; sourceTree = "<group>"; };
-		3FBAE581281014A500C3F30C /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
+		3FBAE581281014A500C3F30C /* RateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateController.swift; sourceTree = "<group>"; };
 		3FE21960281183A500702DF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FE219682812A06200702DF4 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		3FE2196C2812A23B00702DF4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3FE2196F2812C7AB00702DF4 /* NewEateriesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEateriesController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE2196D2812A23B00702DF4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +77,7 @@
 			children = (
 				3F38F320280D8C36006A9D3E /* EateriesApp */,
 				3F38F31F280D8C36006A9D3E /* Products */,
+				3FE2196B2812A23B00702DF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,6 +97,8 @@
 				3F15C5EF280EE7C4007EE075 /* Eateries */,
 				3F15C5EC280ECD87007EE075 /* Detail */,
 				3FBAE5802810146D00C3F30C /* Rate */,
+				3FE219672812A02600702DF4 /* Map */,
+				3FE2196E2812C75500702DF4 /* NewEayeries */,
 			);
 			path = EateriesApp;
 			sourceTree = "<group>";
@@ -157,7 +167,7 @@
 		3FE219632811868C00702DF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F38F335280D9010006A9D3E /* Eateries.swift */,
+				3F38F335280D9010006A9D3E /* EateriesController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,7 +175,7 @@
 		3FE21964281186AA00702DF4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3F15C5EA280ECD07007EE075 /* EateryDetailCell.swift */,
+				3F15C5EA280ECD07007EE075 /* DetailCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,7 +183,7 @@
 		3FE21965281186B300702DF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3F15C5E6280EA3C6007EE075 /* EateryDetail.swift */,
+				3F15C5E6280EA3C6007EE075 /* DetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,9 +191,57 @@
 		3FE219662811884000702DF4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3FBAE581281014A500C3F30C /* Rate.swift */,
+				3FBAE581281014A500C3F30C /* RateController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		3FE219672812A02600702DF4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				3FE2196A2812A06800702DF4 /* Controller */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		3FE2196A2812A06800702DF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FE219682812A06200702DF4 /* MapController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		3FE2196B2812A23B00702DF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FE2196C2812A23B00702DF4 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FE2196E2812C75500702DF4 /* NewEayeries */ = {
+			isa = PBXGroup;
+			children = (
+				3FE219732812C7D100702DF4 /* View */,
+				3FE219722812C7C900702DF4 /* Controller */,
+			);
+			path = NewEayeries;
+			sourceTree = "<group>";
+		};
+		3FE219722812C7C900702DF4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FE2196F2812C7AB00702DF4 /* NewEateriesController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3FE219732812C7D100702DF4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,13 +315,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F15C5EB280ECD07007EE075 /* EateryDetailCell.swift in Sources */,
+				3F15C5EB280ECD07007EE075 /* DetailCell.swift in Sources */,
 				3F38F322280D8C36006A9D3E /* AppDelegate.swift in Sources */,
-				3F15C5E7280EA3C6007EE075 /* EateryDetail.swift in Sources */,
+				3F15C5E7280EA3C6007EE075 /* DetailController.swift in Sources */,
 				3F15C5E9280EAE0D007EE075 /* RestModel.swift in Sources */,
-				3F38F336280D9010006A9D3E /* Eateries.swift in Sources */,
+				3FE219702812C7AB00702DF4 /* NewEateriesController.swift in Sources */,
+				3F38F336280D9010006A9D3E /* EateriesController.swift in Sources */,
 				3F38F324280D8C36006A9D3E /* SceneDelegate.swift in Sources */,
-				3FBAE582281014A500C3F30C /* Rate.swift in Sources */,
+				3FBAE582281014A500C3F30C /* RateController.swift in Sources */,
+				3FE219692812A06200702DF4 /* MapController.swift in Sources */,
 				3F38F338280D9034006A9D3E /* EateriesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
